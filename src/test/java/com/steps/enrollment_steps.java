@@ -38,6 +38,7 @@ public class enrollment_steps {
 	public RecepitPgObject recepitPgObject;
 	public String country;
 	public enrollment_steps (Base base){
+		System.out.println("11111111111");
 		this.base = base;
 		this.driver=base.getDriver();
 		regPgObject=new RegPgObject(driver);
