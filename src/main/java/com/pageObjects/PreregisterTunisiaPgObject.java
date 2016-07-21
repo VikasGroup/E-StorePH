@@ -12,14 +12,14 @@ public class PreregisterTunisiaPgObject {
 		PreregisterTunisiaPgObject.driver = driver;	
 	}
 //Step1
-	public static void selectReferrer(String referrer){
+	public static void enterReferrer(String value){
 		WebElement referrerIrID = driver.findElement(By.xpath(".//*[@id='txtReferrer']"));
-		referrerIrID.sendKeys(referrer);
+		referrerIrID.sendKeys(value);
 	}
 	
-	public static void selectCountry(String country){
+	public static void selectCountry(String value){
 		Select dpCountry= new Select(driver.findElement(By.xpath(".//*[@id='ddlCountry']")));
-		dpCountry.selectByVisibleText(country);
+		dpCountry.selectByIndex(Integer.parseInt(value));
 		
 	}
 
@@ -28,73 +28,73 @@ public class PreregisterTunisiaPgObject {
 		step1countinue.click();
 	}
 	//step2
-	public static void selectTitle(String title){
+	public static void selectTitle(String value){
 		Select dpTitle = new Select(driver.findElement(By.xpath(".//*[@id='ddlTitle']")));
-		dpTitle.selectByVisibleText(title);
+		dpTitle.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void firstName(String name){
+	public static void firstName(String value){
 		WebElement fName = driver.findElement(By.xpath(".//*[@id='txtFirstName']"));
-		fName.sendKeys(name);
+		fName.sendKeys(value);
 	}
 	
-	public static void lastName(String name){
+	public static void lastName(String value){
 		WebElement lName = driver.findElement(By.xpath(".//*[@id='txtLastName']"));
-		lName.sendKeys(name);
+		lName.sendKeys(value);
 	}
 	
-	public static void dobMonth(String month){
+	public static void dobMonth(String value){
 		Select dpMonth = new Select(driver.findElement(By.xpath(".//*[@id='ddlMonth']")));
-		dpMonth.selectByVisibleText(month);
+		dpMonth.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void dobDate(String date){
+	public static void dobDate(String value){
 		Select dpDate = new Select(driver.findElement(By.xpath(".//*[@id='ddlDate']")));
-		dpDate.selectByVisibleText(date);
+		dpDate.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void dobYear(String year){
+	public static void dobYear(String value){
 		Select dpYear = new Select(driver.findElement(By.xpath(".//*[@id='ddlYear']")));
-		dpYear.selectByVisibleText(year);
+		dpYear.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void email(String email){
+	public static void email(String value){
 		WebElement emailAdd = driver.findElement(By.xpath(".//*[@id='txtEmailAdd']"));
-		emailAdd.sendKeys(email);
+		emailAdd.sendKeys(value);
 	}
 	
-	public static void reTypeEmail(String email){
+	public static void reTypeEmail(String value){
 		WebElement reEmail  = driver.findElement(By.xpath(".//*[@id='txtEmailAddConfirmation']"));
-		reEmail.sendKeys(email);	
+		reEmail.sendKeys(value);	
 	}
 	
-	public static void selectContNo(String num){
+	public static void selectContNo(String value){
 		Select dpContactNum = new Select(driver.findElement(By.xpath(".//*[@id='ddlPreferredContact']")));
-		dpContactNum.selectByVisibleText(num);
+		dpContactNum.selectByIndex(Integer.parseInt(value));
 	}
-	public static void contNo(String num){
+	public static void contNo(String value){
 		WebElement contactNo = driver.findElement(By.xpath(".//*[@id='txtPreferredContactNo']"));
-		contactNo.sendKeys(num);	
+		contactNo.sendKeys(value);	
 	}
-	public static void password(String pwd){
+	public static void password(String value){
 		WebElement passWord  = driver.findElement(By.xpath(".//*[@id='txtPassword']"));
-		passWord.sendKeys(pwd);	
+		passWord.sendKeys(value);	
 	}
-	public static void rePassword(String pwd){
+	public static void rePassword(String value){
 		WebElement repwd = driver.findElement(By.xpath(".//*[@id='txtReTypePassword']"));
-		repwd.sendKeys(pwd);	
+		repwd.sendKeys(value);	
 	}
-	public static void addline1(String line){
+	public static void addline1(String value){
 		WebElement addl1 = driver.findElement(By.xpath(".//*[@id='txtaddrss1']"));
-		addl1.sendKeys(line);	
+		addl1.sendKeys(value);	
 	}
-	public static void town(String city1){
+	public static void town(String value){
 		WebElement city = driver.findElement(By.xpath(".//*[@id='txttown']"));
-		city.sendKeys(city1);	
+		city.sendKeys(value);	
 	}
-	public static void zipCode(String code){
+	public static void zipCode(String value){
 		WebElement zipcode = driver.findElement(By.xpath(".//*[@id='txtzip']"));
-		zipcode.sendKeys(code);	
+		zipcode.sendKeys(value);	
 	}
 	public static void contiune2(){
 		WebElement step2countinue = driver.findElement(By.xpath(".//*[@id='MainContent_btnRegister']"));
@@ -102,9 +102,9 @@ public class PreregisterTunisiaPgObject {
 	}
 	
 	//Step3
-	public static void iridNum(String id){
+	public static void iridNum(String value){
 		WebElement IR_ID= driver.findElement(By.xpath(".//*[@id='btnVerifyPlacement']"));
-		IR_ID.sendKeys(id);
+		IR_ID.sendKeys(value);
 	}
 	
 	public static void clickPlacement(){
@@ -112,9 +112,9 @@ public class PreregisterTunisiaPgObject {
 		verifyPlacement.click();
 	}
 	
-	public static void trackCentre(String tc){
+	public static void trackCentre(String value){
 		Select dpTraCentre = new Select(driver.findElement(By.xpath(".//*[@id='ddlTCExt']")));
-		dpTraCentre.selectByVisibleText(tc);
+		dpTraCentre.selectByIndex(Integer.parseInt(value));
 	}
 	public static void clickLeftTC(){
 		WebElement leftTC = driver.findElement(By.xpath(".//*[@id='radLeft']"));
