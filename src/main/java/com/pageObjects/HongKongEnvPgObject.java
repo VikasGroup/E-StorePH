@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 public class HongKongEnvPgObject {
 	static WebDriver driver;
 	public HongKongEnvPgObject( WebDriver driver){
-		 LibyaEnvPgObject.driver=driver;
+		HongKongEnvPgObject.driver=driver;
 	 }
 	public void selectTitle(String value){
 		 Select title= new Select(driver.findElement(By.xpath(".//*[@id='ddlTitle']")));
