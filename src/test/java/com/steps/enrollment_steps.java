@@ -116,7 +116,7 @@ public class enrollment_steps {
 	public void validate_registation_page(String regurl) throws Throwable {
 	    Assert.assertEquals(driver.getCurrentUrl(), regurl);
 	}
-
+    
 	@When("^Fill up the registration form and agree to the terms in enrollment$")
 	public void fill_up_the_registration_form_and_agree_to_the_terms_in_enrollment() throws Throwable {
 		if(country.equals("Indonesia")){

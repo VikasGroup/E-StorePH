@@ -14,7 +14,7 @@ public class LogInPgObject {
 	}
 
 	public void clickRegister() {
-		WebElement registerBtn = driver.findElement(By.xpath(".//*[@id='ContentPlaceHolder1_pnRegister']"));
+		WebElement registerBtn = driver.findElement(By.id("ContentPlaceHolder1_pnRegister"));
 		registerBtn.click();
 		String base = driver.getWindowHandle();
 		Set<String> set = driver.getWindowHandles();
