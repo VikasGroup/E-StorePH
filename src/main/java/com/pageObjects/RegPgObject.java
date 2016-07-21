@@ -106,19 +106,19 @@ public class RegPgObject {
 		 WebElement secword=driver.findElement(By.xpath(".//*[@id='SecurityQuestions_SecWord']"));
 		 secword.sendKeys(value);
 	 }
-	 public void enterqapin(String value){
+	 public void enterQApin(String value){
 		 WebElement qapin=driver.findElement(By.xpath(".//*[@id='txtQAPin']"));
 		 qapin.sendKeys(value);
 	 }
-	 public void enterreqapin(String value){
+	 public void enterReQapin(String value){
 		 WebElement reqapin=driver.findElement(By.xpath(".//*[@id='txtQAPin2']"));
 		 reqapin.sendKeys(value);
 	 }
-	 public void enterpwd(String value){
+	 public void enterPwd(String value){
 		  WebElement pwd=driver.findElement(By.xpath(".//*[@id='txtPassword']"));
 		  pwd.sendKeys(value);
 	 }
-	 public void enterrepwd(String value){				 
+	 public void reenterPwd(String value){				 
 		 WebElement repwd=driver.findElement(By.xpath(".//*[@id='txtPassword2']"));	
 		 repwd.sendKeys(value);
 	 }

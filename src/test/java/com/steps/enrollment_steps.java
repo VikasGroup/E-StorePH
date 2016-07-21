@@ -119,10 +119,10 @@ public class enrollment_steps {
 	    
 	    regPgObject.enterAnswer(base.propp.getProperty("ans"));
 	    regPgObject.enterSecword(base.propp.getProperty("secword"));
-	    regPgObject.enterqapin(base.propp.getProperty("qapin"));
-	    regPgObject.enterreqapin(base.propp.getProperty("reqapin"));
-	    regPgObject.enterpwd(base.propp.getProperty("pwd"));
-	    regPgObject.enterrepwd(base.propp.getProperty("repwd"));
+	    regPgObject.enterQApin(base.propp.getProperty("qapin"));
+	    regPgObject.enterReQapin(base.propp.getProperty("reqapin"));
+	    regPgObject.enterPwd(base.propp.getProperty("pwd"));
+	    regPgObject.reenterPwd(base.propp.getProperty("repwd"));
 	    
 	    regPgObject.selectAgreement();
 	    regPgObject.clickConfirmBtn();
