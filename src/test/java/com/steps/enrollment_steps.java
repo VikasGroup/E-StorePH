@@ -54,13 +54,14 @@ public class enrollment_steps {
 	}
 	@Given("^user open the login page$")
 	public void user_open_the_login_page() throws Throwable {
+		System.out.println("11111111111");
 	   driver.get("https://portal.qntest.com/VirtualOffice/onlineestore/Online_Login_VO.aspx");
 	}
 
 	@When("^user click on Register button$")
 	public void user_click_on_Register_button() throws Throwable {
 	    logInPgObject.clickRegister();
-	    
+	    System.out.println("11111111111");
 	}
 
 	@When("^preregister page should displayed with pop up window \"([^\"]*)\"$")
