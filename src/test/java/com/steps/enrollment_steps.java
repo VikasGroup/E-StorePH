@@ -23,7 +23,7 @@ import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
 public class enrollment_steps {
-	public static WebDriver driver;
+	public WebDriver driver;
 	public LogInPgObject logInPgObject;
 	public Base base;
 	public PreRegisterPgObject preRegisterPgObject;

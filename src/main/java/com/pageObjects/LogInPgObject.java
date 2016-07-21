@@ -5,7 +5,6 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.steps.enrollment_steps;
 
 public class LogInPgObject {
 	WebDriver driver;
@@ -25,7 +24,7 @@ public class LogInPgObject {
 		if (set.size() == 0) {
 
 		} else {
-			enrollment_steps.driver.switchTo().window((String) set.toArray()[0]);
+			driver.switchTo().window((String) set.toArray()[0]);
 		}
 		System.out.println(driver.getCurrentUrl());
 	}
