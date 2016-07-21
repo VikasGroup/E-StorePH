@@ -11,8 +11,8 @@ public class BurkinafasoEnvPgObject {
 		 IraqEnvPgObject.driver=driver;
 	 }
 	 public void selectTitle(String value){
-		 Select title= new Select(driver.findElement(By.xpath(".//*[@id='ddlTitle']")));
-        title.selectByVisibleText(value);
+		Select title= new Select(driver.findElement(By.xpath(".//*[@id='ddlTitle']")));
+        title.selectByIndex(Integer.parseInt(value));
 	 }
 		
 	 public void enterSurname(String value){
@@ -53,7 +53,7 @@ public class BurkinafasoEnvPgObject {
 	}
 	 public void SelectValidIdType(String value){
 		 Select valididtype= new Select(driver.findElement(By.xpath(".//*[@id='ddlIDType']")));
-		 valididtype.selectByVisibleText(value);
+		 valididtype.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void enterValidIdNo(String value){
 		WebElement valididno=driver.findElement(By.xpath(".//*[@id='txtValidID']"));
@@ -61,19 +61,19 @@ public class BurkinafasoEnvPgObject {
    }
 	 public void selectNationality(String value){
 		 Select nationality=new Select(driver.findElement(By.xpath(".//*[@id='ddlNatCode']")));
-		 nationality.selectByVisibleText(value);
+		 nationality.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void selectdobmonth(String value){
 		 Select dobmonth=new Select(driver.findElement(By.xpath(".//*[@id='ddlMonth']")));
-		 dobmonth.selectByVisibleText(value);
+		 dobmonth.selectByIndex(Integer.parseInt(value));
    }
 	 public void selectdobdate(String value){
 		 Select dobdate=new Select(driver.findElement(By.xpath(".//*[@id='ddlDate']")));
-		 dobdate.selectByVisibleText(value);
+		 dobdate.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void selectdobyear(String value){
 		 Select dobyear=new Select(driver.findElement(By.xpath(".//*[@id='ddlYear']")));
-		 dobyear.selectByVisibleText(value);
+		 dobyear.selectByIndex(Integer.parseInt(value));
    }
 	 public void enterBenificiary(String value){
 		 WebElement benificiary=driver.findElement(By.xpath(".//*[@id='txtBeneficiary']"));
@@ -81,7 +81,7 @@ public class BurkinafasoEnvPgObject {
    }
 	 public void selectRelationship(String value){
 		 Select relationship=new Select(driver.findElement(By.xpath(".//*[@id='ddlBeneficiary']")));
-		 relationship.selectByVisibleText(value);
+		 relationship.selectByIndex(Integer.parseInt(value));
    }
 	 public void enterMFName(String value){
 		 WebElement mfname=driver.findElement(By.xpath(".//*[@id='txtMothersMaidenName']"));
@@ -89,7 +89,7 @@ public class BurkinafasoEnvPgObject {
    }
 	 public void selectPClang(String value){
 		 Select pclang=new Select(driver.findElement(By.xpath(".//*[@id='ddlPreferredCorrespondenceLanguage']")));
-		 pclang.selectByVisibleText(value);
+		 pclang.selectByIndex(Integer.parseInt(value));
    }
 	 public void enterQApin(String value){
 		 WebElement qapin=driver.findElement(By.xpath(".//*[@id='txtQAPin']"));
