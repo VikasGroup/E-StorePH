@@ -19,7 +19,7 @@ Then Select Payment "<Option>"
 And Enter payment details 
 And click validate 
 And click Confirm button
-
+And validate recepit
 Examples:
 |urlprereg|language|IRID|country|enrolmenttype|urlreg|
-|https://portal.qntest.com/eStore/preregister.aspx?referrer=|EN - English|hu041741|Indonesia||https://portal.qntest.com/eStore/registerindividual.aspx|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|1|hu041741|Indonesia||https://portal.qntest.com/eStore/registerindividual.aspx|

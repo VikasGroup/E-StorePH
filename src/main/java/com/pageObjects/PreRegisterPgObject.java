@@ -20,7 +20,7 @@ public class PreRegisterPgObject {
 	 }
 	 public void selectLanguage(String value){
 		 Select language = new Select(driver.findElement(By.xpath(".//*[@id='ddlLanguage']")));
-		 language.selectByVisibleText(value);
+		 language.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void clickNextBtn(){
 		 WebElement nextBtn=driver.findElement(By.xpath(".//*[@id='cmdOK']"));

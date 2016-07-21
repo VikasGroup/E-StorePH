@@ -7,12 +7,12 @@ import java.util.Properties;
 
 
 
-public class PropertyReader {
+public class PropertyReader extends BasicTest {
 	public Properties propp = new Properties();
 
 	public PropertyReader() {
 		try {
-			InputStream file = getClass().getResourceAsStream(Default.TEST_DATA_FILE.getValue());
+			InputStream file = getClass().getResourceAsStream("/testdata/"+config.getValue("env")+".properties");
 			propp.load(file);
 
 		} catch (FileNotFoundException e) {
