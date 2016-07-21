@@ -4,12 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import com.base.Base;
-
 public class RegPgObject {
 	 WebDriver driver;
-	 public Base base;
+	 
 	 public RegPgObject( WebDriver driver){
 		 this.driver=driver;
 		 
