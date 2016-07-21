@@ -23,7 +23,7 @@ public class PreregisterTunisiaPgObject {
 		
 	}
 
-	public static void continue1(){
+	public static void clickcontinue1(){
 		WebElement step1countinue = driver.findElement(By.xpath(".//*[@id='btnVerifyReferrer']"));
 		step1countinue.click();
 	}
@@ -33,37 +33,37 @@ public class PreregisterTunisiaPgObject {
 		dpTitle.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void firstName(String value){
+	public static void enterfirstName(String value){
 		WebElement fName = driver.findElement(By.xpath(".//*[@id='txtFirstName']"));
 		fName.sendKeys(value);
 	}
 	
-	public static void lastName(String value){
+	public static void enterlastName(String value){
 		WebElement lName = driver.findElement(By.xpath(".//*[@id='txtLastName']"));
 		lName.sendKeys(value);
 	}
 	
-	public static void dobMonth(String value){
+	public static void selectdobMonth(String value){
 		Select dpMonth = new Select(driver.findElement(By.xpath(".//*[@id='ddlMonth']")));
 		dpMonth.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void dobDate(String value){
+	public static void selectdobDate(String value){
 		Select dpDate = new Select(driver.findElement(By.xpath(".//*[@id='ddlDate']")));
 		dpDate.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void dobYear(String value){
+	public static void selectdobYear(String value){
 		Select dpYear = new Select(driver.findElement(By.xpath(".//*[@id='ddlYear']")));
 		dpYear.selectByIndex(Integer.parseInt(value));
 	}
 	
-	public static void email(String value){
+	public static void enteremail(String value){
 		WebElement emailAdd = driver.findElement(By.xpath(".//*[@id='txtEmailAdd']"));
 		emailAdd.sendKeys(value);
 	}
 	
-	public static void reTypeEmail(String value){
+	public static void enterreTypeEmail(String value){
 		WebElement reEmail  = driver.findElement(By.xpath(".//*[@id='txtEmailAddConfirmation']"));
 		reEmail.sendKeys(value);	
 	}
@@ -72,37 +72,37 @@ public class PreregisterTunisiaPgObject {
 		Select dpContactNum = new Select(driver.findElement(By.xpath(".//*[@id='ddlPreferredContact']")));
 		dpContactNum.selectByIndex(Integer.parseInt(value));
 	}
-	public static void contNo(String value){
+	public static void entercontNo(String value){
 		WebElement contactNo = driver.findElement(By.xpath(".//*[@id='txtPreferredContactNo']"));
 		contactNo.sendKeys(value);	
 	}
-	public static void password(String value){
+	public static void enterpassword(String value){
 		WebElement passWord  = driver.findElement(By.xpath(".//*[@id='txtPassword']"));
 		passWord.sendKeys(value);	
 	}
-	public static void rePassword(String value){
+	public static void reenterPassword(String value){
 		WebElement repwd = driver.findElement(By.xpath(".//*[@id='txtReTypePassword']"));
 		repwd.sendKeys(value);	
 	}
-	public static void addline1(String value){
+	public static void enteraddline1(String value){
 		WebElement addl1 = driver.findElement(By.xpath(".//*[@id='txtaddrss1']"));
 		addl1.sendKeys(value);	
 	}
-	public static void town(String value){
+	public static void entertown(String value){
 		WebElement city = driver.findElement(By.xpath(".//*[@id='txttown']"));
 		city.sendKeys(value);	
 	}
-	public static void zipCode(String value){
+	public static void enterzipCode(String value){
 		WebElement zipcode = driver.findElement(By.xpath(".//*[@id='txtzip']"));
 		zipcode.sendKeys(value);	
 	}
-	public static void contiune2(){
+	public static void clickcontiune2(){
 		WebElement step2countinue = driver.findElement(By.xpath(".//*[@id='MainContent_btnRegister']"));
 		step2countinue.click();
 	}
 	
 	//Step3
-	public static void iridNum(String value){
+	public static void enteriridNum(String value){
 		WebElement IR_ID= driver.findElement(By.xpath(".//*[@id='btnVerifyPlacement']"));
 		IR_ID.sendKeys(value);
 	}
@@ -112,7 +112,7 @@ public class PreregisterTunisiaPgObject {
 		verifyPlacement.click();
 	}
 	
-	public static void trackCentre(String value){
+	public static void selecttrackCentre(String value){
 		Select dpTraCentre = new Select(driver.findElement(By.xpath(".//*[@id='ddlTCExt']")));
 		dpTraCentre.selectByIndex(Integer.parseInt(value));
 	}
