@@ -28,8 +28,8 @@ public class IraqEnvPgObject {
          address1.sendKeys(value);
 	}
 	 public void enterTown(String value){
-		 WebElement town=driver.findElement(By.xpath(".//*[@id='txtCity']"));
-         town.sendKeys(value);
+         Select town= new Select(driver.findElement(By.xpath(".//*[@id='ddlCity']")));
+         town.selectByIndex(Integer.parseInt(value));
 	}
 	 public void enterPostal(String value){
 		 WebElement postal=driver.findElement(By.xpath(".//*[@id='txtPostZip']"));

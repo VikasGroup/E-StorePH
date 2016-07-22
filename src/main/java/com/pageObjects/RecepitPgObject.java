@@ -21,10 +21,18 @@ public class RecepitPgObject {
 		 String text=value.getText().substring(0, 2);
 		 return text;
 	 }
-	 public String getFee(){
+	 public String getFee(String currency){
+		 if(currency.equals("us")){
 		 WebElement value=driver.findElement(By.id("lblTotalAmountPaid"));
 		 String text=value.getText().substring(4, 6);
 		 return text;
+		 }
+		 else if(currency.equals("euro")){
+			 WebElement value=driver.findElement(By.id("lblEuroTotal"));
+			 String text=value.getText().substring(4, 6);
+			 return text;
+		 }
+		 return "";
 	 }
 	 public String getLogo(){
 		 WebElement logo=driver.findElement(By.id("imgLogo"));
