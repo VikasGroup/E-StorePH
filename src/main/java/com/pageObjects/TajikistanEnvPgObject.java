@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class TajikistanEnvPgObject {
-	static WebDriver driver;
+	public WebDriver driver;
 	 public TajikistanEnvPgObject( WebDriver driver){
-		 IraqEnvPgObject.driver=driver;
+		 this.driver=driver;
 	 }
 	 public void selectTitle(String value){
 		 Select title= new Select(driver.findElement(By.xpath(".//*[@id='ddlTitle']")));
@@ -107,7 +107,7 @@ public class TajikistanEnvPgObject {
 		 WebElement repwd=driver.findElement(By.xpath(".//*[@id='txtPassword2']"));	
 		 repwd.sendKeys(value);
     }
-	public static void  emailTextselectbtn() {
+	public void  emailTextselectbtn() {
 	WebElement emailTextselectbtn = driver.findElement(By.xpath(".//*[@id='rbtnRegistrationSubscriptionOption']/tbody/tr[1]/td/span"));
 	emailTextselectbtn.click();
 	}

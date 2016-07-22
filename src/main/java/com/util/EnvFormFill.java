@@ -14,6 +14,7 @@ import com.pageObjects.LibyaEnvPgObject;
 import com.pageObjects.MyanmarEnvPgObject;
 import com.pageObjects.SyrianArabRepublicEnvPgObject;
 import com.pageObjects.TajikistanEnvPgObject;
+import com.pageObjects.TunisiaEnvPgObject;
 
 public class EnvFormFill {
 	public void BurEnvform(String prefix,BurkinafasoEnvPgObject burkinafasoEnvpgobject,Base base) throws InterruptedException{
@@ -173,7 +174,7 @@ public class EnvFormFill {
 		libyaenvpgobject.selectAgreement();
 		libyaenvpgobject.clickConfirmBtn();
 	}
-	public void TajEnvform(String prefix,TajikistanEnvPgObject tajikistanenvpgobject,Base base){
+	public void TajEnvform(String prefix,TajikistanEnvPgObject tajikistanenvpgobject,Base base) throws InterruptedException{
 		tajikistanenvpgobject.selectTitle(base.propp.getProperty(prefix+"title"));
 		tajikistanenvpgobject.enterSurname(base.propp.getProperty(prefix+"surname"));
 		tajikistanenvpgobject.enterGiveName(base.propp.getProperty(prefix+"given_name"));
@@ -185,6 +186,7 @@ public class EnvFormFill {
 		tajikistanenvpgobject.enterEmail(base.propp.getProperty(prefix+"email"));
 		tajikistanenvpgobject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		tajikistanenvpgobject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
+		Thread.sleep(5000);
 		tajikistanenvpgobject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		tajikistanenvpgobject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		tajikistanenvpgobject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -192,6 +194,7 @@ public class EnvFormFill {
 		tajikistanenvpgobject.selectdobyear(base.propp.getProperty(prefix+"dobyear"));
 		tajikistanenvpgobject.selectRelationship(base.propp.getProperty(prefix+"relationship"));
 		tajikistanenvpgobject.enterMFName(base.propp.getProperty(prefix+"mfname"));
+		tajikistanenvpgobject.enterBenificiary(base.propp.getProperty(prefix+"benificiary"));
 		tajikistanenvpgobject.selectPClang(base.propp.getProperty(prefix+"pclang"));
 		tajikistanenvpgobject.enterQApin(base.propp.getProperty(prefix+"qapin"));
 		tajikistanenvpgobject.enterReQapin(base.propp.getProperty(prefix+"reqapin"));
@@ -416,6 +419,36 @@ public class EnvFormFill {
 		syrianArabRepublicEnvPgObject.selectAgreement();
 		syrianArabRepublicEnvPgObject.clickConfirmBtn();
 	}
+	public void TunEnvForm(String prex,TunisiaEnvPgObject tunisiaEnvPgObject , Base base) throws InterruptedException{
+		  tunisiaEnvPgObject.selectTitle(base.propp.getProperty(prex+"title"));
+		  tunisiaEnvPgObject.enterSurname(base.propp.getProperty(prex+"surname"));
+		  tunisiaEnvPgObject.enterGiveName(base.propp.getProperty(prex+"given_name"));
+		  tunisiaEnvPgObject.enterArabname(prex + " ");
+		  tunisiaEnvPgObject.selectdobmonth(base.propp.getProperty(prex +"dobmonth"));
+		  tunisiaEnvPgObject.selectdobdate(base.propp.getProperty(prex +"dobdate"));
+		  tunisiaEnvPgObject.selectdobyear(base.propp.getProperty(prex +"dobyear"));
+		  tunisiaEnvPgObject.enterEmail(base.propp.getProperty(prex +"email"));
+		  tunisiaEnvPgObject.ReEnterEmail(base.propp.getProperty(prex +"reemail"));
+		  tunisiaEnvPgObject.selectContNo(base.propp.getProperty(prex +"contact"));
+		  tunisiaEnvPgObject.entercontNo(base.propp.getProperty(prex +"homephone"));
+		  tunisiaEnvPgObject.enterPwd(base.propp.getProperty(prex+"pwd"));
+		  tunisiaEnvPgObject.reenterPwd(base.propp.getProperty(prex+"repwd"));
+		  tunisiaEnvPgObject.EnterAddress(base.propp.getProperty(prex+"address1"));
+		  tunisiaEnvPgObject.enterTown(base.propp.getProperty(prex+"town"));
+		  tunisiaEnvPgObject.enterPostal(base.propp.getProperty(prex+"postal"));
+		  tunisiaEnvPgObject.clickcontiune2();
+		  Thread.sleep(8000);
+		  tunisiaEnvPgObject.enterIRID(base.propp.getProperty(prex+"irid"));
+		  tunisiaEnvPgObject.clickVerifyBtn();
+		  Thread.sleep(5000);
+		  tunisiaEnvPgObject.selectPlacement(base.propp.getProperty(prex+"tcp"));
+		  Thread.sleep(5000);
+		  tunisiaEnvPgObject.prefferPlacement(base.propp.getProperty(prex+"placementside"));
+		  tunisiaEnvPgObject.clickCountinue3();
+		  Thread.sleep(5000);
+		  tunisiaEnvPgObject.clickSubmit();
+		  
+		 }
 	
 
 }
