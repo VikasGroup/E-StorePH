@@ -5,12 +5,45 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class TunisiaEnvPgObject {
-	static WebDriver driver;
+import com.base.Base;
+import com.vselenium.BasicPageObject;
+
+public class TunisiaEnvPgObject extends BasicPageObject{
 	
-	public TunisiaEnvPgObject(WebDriver driver){
-		TunisiaEnvPgObject.driver = driver;	
-	}
+	public WebElement title_dp = createElement(By.xpath(".//*[@id='ddlTitle']"));
+	public WebElement surname_txt  = createElement(By.xpath(".//*[@id='txtFirstName']"));
+	public WebElement given_name_txt = createElement(By.xpath(".//*[@id='txtLastName']"));
+	public WebElement arabname_txt = createElement(By.xpath(".//*[@id='tbFullName']"));	
+	public WebElement add_txt = createElement(By.xpath(".//*[@id='txtaddrss1']"));
+	public WebElement town_txt = createElement(By.xpath(".//*[@id='txttown']"));
+	public WebElement post_txt = createElement(By.xpath(".//*[@id='txtzip']"));
+	public WebElement contact_dp = createElement(By.xpath(".//*[@id='ddlPreferredContact']"));
+	public WebElement contact_txt = createElement(By.xpath(".//*[@id='txtPreferredContactNo']"));
+	public WebElement email_txt = createElement(By.xpath(".//*[@id='txtEmailAdd']"));
+	public WebElement reemail_txt = createElement(By.xpath(".//*[@id='txtEmailAddConfirmation']"));
+	public WebElement idtype_dp = createElement(By.xpath(".//*[@id='ddlIDType']"));
+	public WebElement idno_txt = createElement(By.xpath(".//*[@id='txtValidID']"));
+	public WebElement nationality_dp = createElement(By.xpath(".//*[@id='ddlMonth']"));
+	public WebElement dobmonth_dp = createElement(By.xpath(".//*[@id='ddlMonth']"));
+	public WebElement dobdate_dp = createElement(By.xpath(".//*[@id='ddlDate']"));
+	public WebElement dobyear_dp = createElement(By.xpath(".//*[@id='ddlYear']"));
+	public WebElement pwd_txt = createElement(By.xpath(".//*[@id='txtPassword']"));
+	public WebElement repwd_txt = createElement(By.xpath(".//*[@id='txtReTypePassword']"));
+	public WebElement step2_cl = createElement(By.xpath(".//*[@id='MainContent_btnRegister']"));
+	public WebElement IR_ID_txt = createElement(By.xpath(".//*[@id='btnVerifyPlacement']"));
+	public WebElement vplace_cl = createElement(By.xpath(".//*[@id='btnVerifyPlacement']"));
+	public WebElement trecentre_dp = createElement(By.xpath(".//*[@id='ddlTCExt']"));
+	public WebElement step3_cl = createElement(By.xpath(".//*[@id='MainContent_btnContinuePlacement']"));
+	public WebElement submit_cl = createElement(By.xpath(".//*[@id='btnSubmit']"));
+	public WebElement right_cl = createElement(By.xpath(".//*[@id='radRight']"));
+	public WebElement left_cl = createElement(By.xpath(".//*[@id='radLeft']"));
+	
+	static WebDriver driver;
+	 public Base base;
+	 public TunisiaEnvPgObject( WebDriver driver){
+		 super(driver);
+		 TunisiaEnvPgObject.driver=driver;	 
+	 }
 //Step1
 	/*public  void enterReferrer(String value){
 		WebElement referrerIrID = driver.findElement(By.xpath(".//*[@id='txtReferrer']"));
@@ -29,105 +62,85 @@ public class TunisiaEnvPgObject {
 	}*/
 	//step2
 	public  void selectTitle(String value){
-		Select dpTitle = new Select(driver.findElement(By.xpath(".//*[@id='ddlTitle']")));
+		Select dpTitle = new Select(title_dp);
 		dpTitle.selectByIndex(Integer.parseInt(value));
 	}
-	
 	public  void enterSurname(String value){
-		WebElement fName = driver.findElement(By.xpath(".//*[@id='txtFirstName']"));
-		fName.sendKeys(value);
-	}
-	
-	
+		surname_txt.sendKeys(value);
+	}		
 	public  void enterGiveName(String value){
-		WebElement lName = driver.findElement(By.xpath(".//*[@id='txtLastName']"));
-		lName.sendKeys(value);
+		given_name_txt.sendKeys(value);
 	}
 	public  void enterArabname(String value){
-		WebElement aName = driver.findElement(By.xpath(".//*[@id='tbFullName']"));
-		aName.sendKeys(value);
+		arabname_txt.sendKeys(value);
 	}
-	
 	public  void selectdobmonth(String value){
-		Select dpMonth = new Select(driver.findElement(By.xpath(".//*[@id='ddlMonth']")));
+		Select dpMonth = new Select(dobmonth_dp);
 		dpMonth.selectByIndex(Integer.parseInt(value));
 	}
-	
 	public  void selectdobdate(String value){
-		Select dpDate = new Select(driver.findElement(By.xpath(".//*[@id='ddlDate']")));
+		Select dpDate = new Select(dobdate_dp);
 		dpDate.selectByIndex(Integer.parseInt(value));
 	}
 	
 	public  void selectdobyear(String value){
-		Select dpYear = new Select(driver.findElement(By.xpath(".//*[@id='ddlYear']")));
+		Select dpYear = new Select(dobyear_dp);
 		dpYear.selectByIndex(Integer.parseInt(value));
 	}
 	
 	public  void enterEmail(String value){
-		WebElement emailAdd = driver.findElement(By.xpath(".//*[@id='txtEmailAdd']"));
-		emailAdd.sendKeys(value);
+		email_txt.sendKeys(value);
 	}
 	
 	public  void ReEnterEmail(String value){
-		WebElement reEmail  = driver.findElement(By.xpath(".//*[@id='txtEmailAddConfirmation']"));
-		reEmail.sendKeys(value);	
+		reemail_txt.sendKeys(value);	
 	}
 	
 	public  void selectContNo(String value){
-		Select dpContactNum = new Select(driver.findElement(By.xpath(".//*[@id='ddlPreferredContact']")));
+		Select dpContactNum = new Select(contact_dp);
 		dpContactNum.selectByIndex(Integer.parseInt(value));
 	}
 	public  void entercontNo(String value){
-		WebElement contactNo = driver.findElement(By.xpath(".//*[@id='txtPreferredContactNo']"));
-		contactNo.sendKeys(value);	
+		contact_txt.sendKeys(value);	
 	}
 	public  void enterPwd(String value){
-		WebElement passWord  = driver.findElement(By.xpath(".//*[@id='txtPassword']"));
-		passWord.sendKeys(value);	
+		pwd_txt.sendKeys(value);	
 	}
 	public  void reenterPwd(String value){
-		WebElement repwd = driver.findElement(By.xpath(".//*[@id='txtReTypePassword']"));
-		repwd.sendKeys(value);	
+		repwd_txt.sendKeys(value);	
 	}
 	public  void EnterAddress(String value){
-		WebElement addl1 = driver.findElement(By.xpath(".//*[@id='txtaddrss1']"));
-		addl1.sendKeys(value);	
+		add_txt.sendKeys(value);	
 	}
 	public  void enterTown(String value){
-		WebElement city = driver.findElement(By.xpath(".//*[@id='txttown']"));
-		city.sendKeys(value);	
+		town_txt.sendKeys(value);	
 	}
 	public  void enterPostal(String value){
-		WebElement zipcode = driver.findElement(By.xpath(".//*[@id='txtzip']"));
-		zipcode.sendKeys(value);	
+		post_txt.sendKeys(value);	
 	}
 	public  void clickcontiune2(){
-		WebElement step2countinue = driver.findElement(By.xpath(".//*[@id='MainContent_btnRegister']"));
-		step2countinue.click();
+		step2_cl.click();
 	}
 	
 	//Step3
 	public  void enterIRID(String value){
-		WebElement IR_ID= driver.findElement(By.xpath(".//*[@id='btnVerifyPlacement']"));
-		IR_ID.sendKeys(value);
+		IR_ID_txt.sendKeys(value);
 	}
 	
 	public  void clickVerifyBtn(){
-		WebElement verifyPlacement = driver.findElement(By.xpath(".//*[@id='btnVerifyPlacement']"));
-		verifyPlacement.click();
+		vplace_cl.click();
 	}
 	
 	public  void selectPlacement(String value){
-		Select dpTraCentre = new Select(driver.findElement(By.xpath(".//*[@id='ddlTCExt']")));
+		Select dpTraCentre = new Select(trecentre_dp);
 		dpTraCentre.selectByIndex(Integer.parseInt(value));
 	}
 	public void prefferPlacement(String value){
-		 WebElement right=driver.findElement(By.xpath(".//*[@id='radRight']"));
-		 WebElement left=driver.findElement(By.xpath(".//*[@id='radLeft']"));
-		 if(value.equals("right")){
-			 right.click();
-		 }else if(value.equals("left")){
-			 left.click();			 
+		 
+		 if(value.equals("right_cl")){
+			 right_cl.click();
+		 }else if(value.equals("left_cl")){
+			 left_cl.click();			 
 		 }
 	}
 	/*public  void clickLeftTC(){
@@ -139,14 +152,12 @@ public class TunisiaEnvPgObject {
 		rightTC.click();
 	}*/
 	public  void clickCountinue3(){
-		WebElement countinue3 = driver.findElement(By.xpath(".//*[@id='MainContent_btnContinuePlacement']"));
-		countinue3.click();
+		step3_cl.click();
 	}
 	
 	//Step 4
 	public  void clickSubmit(){
-		WebElement submit = driver.findElement(By.xpath(".//*[@id='btnSubmit']"));
-		submit.click();
+		submit_cl.click();
 	}
 	
 }

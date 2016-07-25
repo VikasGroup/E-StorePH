@@ -6,139 +6,156 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.base.Base;
+import com.vselenium.BasicPageObject;
 
-public class MyanmarEnvPgObject {
-	WebDriver driver;
+public class MyanmarEnvPgObject extends BasicPageObject{
+	
+	public WebElement title_dp = createElement(By.xpath(".//*[@id='ddlTitle']"));
+	public WebElement surname_txt  = createElement(By.xpath(".//*[@id='txtLastName']"));
+	public WebElement given_name_txt = createElement(By.xpath(".//*[@id='txtFirstName']"));
+	public WebElement add_txt = createElement(By.xpath(".//*[@id='txtAddr1']"));
+	public WebElement town_txt = createElement(By.xpath(".//*[@id='txtCity']"));
+	public WebElement post_txt = createElement(By.xpath(".//*[@id='txtPostZip']"));
+	public WebElement homephone_txt = createElement(By.xpath(".//*[@id='tbHomeCountryHomeTel']"));
+	public WebElement mobilephone_txt = createElement(By.xpath(".//*[@id='ctlMobilePhone_tbHomeCountryMobileTel']"));
+	public WebElement email_txt = createElement(By.xpath(".//*[@id='txtEMail']"));
+	public WebElement reemail_txt = createElement(By.xpath(".//*[@id='txtEMail2']"));
+	public WebElement idtype_dp = createElement(By.xpath(".//*[@id='ddlIDType']"));
+	public WebElement idno_txt = createElement(By.xpath(".//*[@id='txtValidID']"));
+	public WebElement nationality_dp = createElement(By.xpath(".//*[@id='ddlMonth']"));
+	public WebElement dobmonth_dp = createElement(By.xpath(".//*[@id='ddlMonth']"));
+	public WebElement dobdate_dp = createElement(By.xpath(".//*[@id='ddlDate']"));
+	public WebElement dobyear_dp = createElement(By.xpath(".//*[@id='ddlYear']"));
+	public WebElement benificiary_txt = createElement(By.xpath(".//*[@id='txtBeneficiary']"));
+	public WebElement relationship_dp = createElement(By.xpath(".//*[@id='ddlBeneficiary']"));
+	public WebElement mfname_txt = createElement(By.xpath(".//*[@id='txtMothersMaidenName']"));
+	public WebElement pclang_dp = createElement(By.xpath(".//*[@id='ddlPreferredCorrespondenceLanguage']"));
+	public WebElement qapin_txt = createElement(By.xpath(".//*[@id='txtQAPin']"));	
+	public WebElement secques_dp = createElement(By.xpath(".//*[@id='SecurityQuestions_IRQuestion1']"));
+	public WebElement secans_txt = createElement(By.xpath(".//*[@id='SecurityQuestions_IRAnswer1']"));
+	public WebElement secwrd_txt = createElement(By.xpath(".//*[@id='SecurityQuestions_SecWord']"));
+	public WebElement reqapin_txt = createElement(By.xpath(".//*[@id='txtQAPin2']"));
+	public WebElement pwd_txt = createElement(By.xpath(".//*[@id='txtPassword']"));
+	public WebElement repwd_txt = createElement(By.xpath(".//*[@id='txtPassword2']"));
+	public WebElement chk1_c1 = createElement(By.xpath(".//*[@id='chkQuestionaire1']"));
+	public WebElement chk2_c1 = createElement(By.xpath(".//*[@id='chkQuestionaire2']"));
+	public WebElement chk3_c1 = createElement(By.xpath(".//*[@id='chkAccept']"));
+	public WebElement chk4_c1 = createElement(By.xpath(".//*[@id='chkCOE']"));
+	public WebElement chk5_c1 = createElement(By.xpath(".//*[@id='chkDisclaimer']"));
+	public WebElement chk6_c1 = createElement(By.xpath(".//*[@id='cbWORLDCheckBox01']"));
+	public WebElement confirm_btn = createElement(By.xpath(".//*[@id='cmdOK']"));
+	
+	static WebDriver driver;
 	 public Base base;
-	 
 	 public MyanmarEnvPgObject( WebDriver driver){
-		 this.driver=driver;	 
-}
+		 super(driver);
+		 MyanmarEnvPgObject.driver=driver;	 
+	 }
 	 public void selectTitle(String value){
-		 Select title= new Select(driver.findElement(By.xpath(".//*[@id='ddlTitle']")));
+		 Select title= new Select(title_dp);
 		 title.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void enterSurname(String value){
-		 WebElement surname=driver.findElement(By.xpath(".//*[@id='txtLastName']"));
-		 surname.sendKeys(value);
+		 surname_txt.sendKeys(value);
 	 }
 	 public void enterGiveName(String value){
-		 WebElement given_name=driver.findElement(By.xpath(".//*[@id='txtFirstName']"));
-		 given_name.sendKeys(value);
+		 given_name_txt.sendKeys(value);
 	 }
 	 public void EnterAddress(String value){
-		 WebElement address1=driver.findElement(By.xpath(".//*[@id='txtAddr1']"));
-		 address1.sendKeys(value);
+		 add_txt.sendKeys(value);
 	 }
 	 public void enterTown(String value){
-		 WebElement town=driver.findElement(By.xpath(".//*[@id='txtCity']"));
-		 town.sendKeys(value);
+		 town_txt.sendKeys(value);
 	 }
 	 public void enterPostal(String value){
-		 WebElement postal=driver.findElement(By.xpath(".//*[@id='txtPostZip']"));
-		 postal.sendKeys(value);
+		 post_txt.sendKeys(value);
 	 }
 	 public void enterHomePhone(String value){
-		 WebElement homephone=driver.findElement(By.xpath(".//*[@id='tbHomeCountryHomeTel']"));
-		 homephone.sendKeys(value);
+		 homephone_txt.sendKeys(value);
 	 }
 	 public void enterMoblieNumber(String value){
-		 WebElement mobilephone=driver.findElement(By.xpath(".//*[@id='ctlMobilePhone_tbHomeCountryMobileTel']"));
-		 mobilephone.sendKeys(value);
+		 mobilephone_txt.sendKeys(value);
 }
 	 public void enterEmail(String value){
-		 WebElement email=driver.findElement(By.xpath(".//*[@id='txtEMail']"));
-		 email.sendKeys(value);
+		 email_txt.sendKeys(value);
 	 }
 	 public void ReEnterEmail(String value){
-		 WebElement reemail=driver.findElement(By.xpath(".//*[@id='txtEMail2']"));
-		 reemail.sendKeys(value);
+		 reemail_txt.sendKeys(value);
 	 }
 	 public void SelectValidIdType(String value){
-		 Select valididtype= new Select(driver.findElement(By.xpath(".//*[@id='ddlIDType']")));
+		 Select valididtype= new Select(idtype_dp);
 		 valididtype.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void enterValidIdNo(String value){
-		WebElement valididno=driver.findElement(By.xpath(".//*[@id='txtValidID']"));
-		valididno.sendKeys(value);
+		 idno_txt.sendKeys(value);
 	 }
 	 public void selectNationality(String value){
-		 Select nationality=new Select(driver.findElement(By.xpath(".//*[@id='ddlNatCode']")));
+		 Select nationality=new Select(nationality_dp);
 		 nationality.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void selectdobmonth(String value){
-		 Select dobmonth=new Select(driver.findElement(By.xpath(".//*[@id='ddlMonth']")));
+		 Select dobmonth=new Select(dobmonth_dp);
 		 dobmonth.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void selectdobdate(String value){
-		 Select dobdate=new Select(driver.findElement(By.xpath(".//*[@id='ddlDate']")));
+		 Select dobdate=new Select(dobdate_dp);
 		 dobdate.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void selectdobyear(String value){
-		 Select dobyear=new Select(driver.findElement(By.xpath(".//*[@id='ddlYear']")));
+		 Select dobyear=new Select(dobyear_dp);
 		 dobyear.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void enterBenificiary(String value){
-		 WebElement benificiary=driver.findElement(By.xpath(".//*[@id='txtBeneficiary']"));
-		 benificiary.sendKeys(value);
+		 benificiary_txt.sendKeys(value);
 	 }
 	 public void selectRelationship(String value){
-		 Select relationship=new Select(driver.findElement(By.xpath(".//*[@id='ddlBeneficiary']")));
+		 Select relationship=new Select(relationship_dp);
 		 relationship.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void enterMFName(String value){
-		 WebElement mfname=driver.findElement(By.xpath(".//*[@id='txtMothersMaidenName']"));
-		 mfname.sendKeys(value);
+		 mfname_txt.sendKeys(value);
 	 }
 	 public void selectPClang(String value){
-		 Select pclang=new Select(driver.findElement(By.xpath(".//*[@id='ddlPreferredCorrespondenceLanguage']")));
+		 Select pclang=new Select(pclang_dp);
 		 pclang.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void selectSecques(String value){
-		 Select secques=new Select(driver.findElement(By.xpath(".//*[@id='SecurityQuestions_IRQuestion1']")));
+		 Select secques=new Select(secques_dp);
 		 secques.selectByIndex(Integer.parseInt(value));
 	 }
 	 public void enterAnswer(String value){
-		 WebElement ans=driver.findElement(By.xpath(".//*[@id='SecurityQuestions_IRAnswer1']"));
-		 ans.sendKeys(value);
+		 secans_txt.sendKeys(value);
 	 }
 	 public void enterSecword(String value){
-		 WebElement secword=driver.findElement(By.xpath(".//*[@id='SecurityQuestions_SecWord']"));
-		 secword.sendKeys(value);
+		 secwrd_txt.sendKeys(value);
 	 }
 	 public void enterQApin(String value){
-		 WebElement qapin=driver.findElement(By.xpath(".//*[@id='txtQAPin']"));
-		 qapin.sendKeys(value);
+		 qapin_txt.sendKeys(value);
 	 }
 	 public void enterReQapin(String value){
-		 WebElement reqapin=driver.findElement(By.xpath(".//*[@id='txtQAPin2']"));
-		 reqapin.sendKeys(value);
+		 reqapin_txt.sendKeys(value);
 	 }
 	 public void enterPwd(String value){
-		  WebElement pwd=driver.findElement(By.xpath(".//*[@id='txtPassword']"));
-		  pwd.sendKeys(value);
+		 pwd_txt.sendKeys(value);
 	 }
 	 public void reenterPwd(String value){				 
-		 WebElement repwd=driver.findElement(By.xpath(".//*[@id='txtPassword2']"));	
-		 repwd.sendKeys(value);
+		 repwd_txt.sendKeys(value);
 	 }
 	 public void selectAgreement(){
-		 WebElement chk1=driver.findElement(By.xpath(".//*[@id='chkQuestionaire1']"));
-		 WebElement chk2=driver.findElement(By.xpath(".//*[@id='chkQuestionaire2']"));
-		 WebElement chk3=driver.findElement(By.xpath(".//*[@id='chkAccept']"));
-		 WebElement chk4=driver.findElement(By.xpath(".//*[@id='chkCOE']"));
-		 WebElement chk5=driver.findElement(By.xpath(".//*[@id='chkDisclaimer']"));
-		 WebElement chk6=driver.findElement(By.xpath(".//*[@id='cbWORLDCheckBox01']"));
-		 chk1.click();
-		 chk2.click();
-		 chk3.click();
-		 chk4.click();
-		 chk5.click();
-		 chk6.click();
+		 chk1_c1.click();
+		 chk2_c1.click();
+		 chk3_c1.click();
+		 chk4_c1.click();
+		 chk5_c1.click();
+		 chk6_c1.click();
 	 }
 	 public void clickConfirmBtn(){
-		 WebElement confirmBtn=driver.findElement(By.xpath(".//*[@id='cmdOK']"));
-		 confirmBtn.click();
+		 confirm_btn.click();
 	 }
+public Legal_disclaimerPgObject clickConfirmBtn1(){
+		 
+		 ConfirmBtn.click();
+		 return new Legal_disclaimerPgObject(driver);
+		}
 
 }
