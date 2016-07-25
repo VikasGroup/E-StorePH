@@ -5,17 +5,24 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 
 import com.base.Base;
+import com.pageObjects.ArmeniaEnvPgObject;
+import com.pageObjects.AzerbaijanEnvPgObject;
 import com.pageObjects.BurkinafasoEnvPgObject;
 import com.pageObjects.ChoosePaymentPgObject;
+import com.pageObjects.CoteDIvoireEnvPgObject;
 import com.pageObjects.EcardPaymentPgObject;
+import com.pageObjects.EthiopiaEnvPgObject;
+import com.pageObjects.GeorgiaEnvPgObject;
 import com.pageObjects.HongKongEnvPgObject;
 import com.pageObjects.Legal_disclaimerPgObject;
 import com.pageObjects.LibyaEnvPgObject;
 import com.pageObjects.LogInPgObject;
 import com.pageObjects.MembershipOptionsPgObject;
+import com.pageObjects.MyanmarEnvPgObject;
 import com.pageObjects.PlacementPgObject;
 import com.pageObjects.PreRegisterPgObject;
 import com.pageObjects.RecepitPgObject;
+import com.pageObjects.SyrianArabRepublicEnvPgObject;
 import com.pageObjects.TajikistanEnvPgObject;
 import com.pageObjects.TunisiaEnvPgObject;
 import com.pageObjects.UserAgreementPgObject;
@@ -43,11 +50,18 @@ public class enrollment_steps {
 	public LibyaEnvPgObject libyaEnvPgObject;
 	public IraqEnvPgObject iraqEnvPgObject;
 	public UserAgreementPgObject userAgreementPgObject;
+	public CoteDIvoireEnvPgObject coteDIvoireEnvPgObject;
+	public AzerbaijanEnvPgObject azerbaijanEnvPgObject;
 	public BurkinafasoEnvPgObject burkinafasoEnvPgObject;
 	public RecepitPgObject recepitPgObject;
 	public HongKongEnvPgObject hongKongEnvPgObject;
 	public TunisiaEnvPgObject tunisiaEnvPgObject;
 	public TajikistanEnvPgObject tajikistanEnvPgObject;
+	public ArmeniaEnvPgObject armeniaEnvPgObject;
+	public GeorgiaEnvPgObject georgiaEnvPgObject;
+	public EthiopiaEnvPgObject ethiopiaEnvPgObject;
+	public MyanmarEnvPgObject myanmarEnvPgObject;
+	public SyrianArabRepublicEnvPgObject syrianArabRepublicEnvPgObject;
 	public EnvFormFill envFormFill;
 	public PlcFormFill plcFormFill;
 	public String country;
@@ -73,6 +87,13 @@ public class enrollment_steps {
 		hongKongEnvPgObject=new HongKongEnvPgObject(driver);
 		tajikistanEnvPgObject=new TajikistanEnvPgObject(driver);
 		tunisiaEnvPgObject=new TunisiaEnvPgObject(driver);
+		georgiaEnvPgObject=new GeorgiaEnvPgObject(driver);
+		armeniaEnvPgObject=new ArmeniaEnvPgObject(driver);
+		azerbaijanEnvPgObject=new AzerbaijanEnvPgObject(driver);
+		syrianArabRepublicEnvPgObject=new SyrianArabRepublicEnvPgObject(driver);
+		coteDIvoireEnvPgObject=new CoteDIvoireEnvPgObject(driver);
+		ethiopiaEnvPgObject=new EthiopiaEnvPgObject(driver);
+		myanmarEnvPgObject=new MyanmarEnvPgObject(driver);
 		plcFormFill=new PlcFormFill();
 		envFormFill=new EnvFormFill();
 		System.out.println(base.propp.getProperty("Tunisia" +"irid"));
@@ -188,6 +209,41 @@ public class enrollment_steps {
 		}else if(country.equals("Tunisia")){
 			envFormFill.TunEnvForm(country, tunisiaEnvPgObject, base);
 			
+		}
+		else if(country.equalsIgnoreCase("Georgia")){
+			envFormFill.GeoEnvForm(country, georgiaEnvPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}
+		else if(country.equals("Armenia")){
+			envFormFill.ArmEnvForm(country, armeniaEnvPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}else if(country.equals("Syrian Arab Republic")){
+			country="Syrian";
+			envFormFill.SyrEnvForm(country, syrianArabRepublicEnvPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}
+		else if(country.equals("Azerbaijan")){
+			envFormFill.AzrEnvForm(country, azerbaijanEnvPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}else if(country.equals("Cote D'Ivoire")){
+			country="Coten";
+			envFormFill.CotEnvForm(country, coteDIvoireEnvPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}
+		else if(country.equals("Ethiopia")){
+			envFormFill.EthEnvForm(country, ethiopiaEnvPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}
+		else if(country.equals("Myanmar")){
+			envFormFill.MyaEnvForm(country, myanmarEnvPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
 		}
 		
 	}

@@ -23,12 +23,19 @@ And validate recepit
 Examples:
 |urlprereg|language|IRID|country|enrolmenttype|urlreg|Option|
 |https://portal.qntest.com/eStore/preregister.aspx?referrer=|1|hu041741|Indonesia||https://portal.qntest.com/eStore/registerindividual.aspx|us|
-|https://portal.qntest.com/eStore/preregister.aspx?referrer=|2|hu041741|Libia||https://portal.qntest.com/eStore/registerindividual.aspx|us|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|2|hu041741|Libya||https://portal.qntest.com/eStore/registerindividual.aspx|us|
 |https://portal.qntest.com/eStore/preregister.aspx?referrer=|2|hu041741|Burkina Faso||https://portal.qntest.com/eStore/registerindividual.aspx|us|
 |https://portal.qntest.com/eStore/preregister.aspx?referrer=|0|hu041741|Iraq||https://portal.qntest.com/eStore/registerindividual.aspx|euro|
 |https://portal.qntest.com/eStore/preregister.aspx?referrer=|3|hu041741|Hong Kong, SAR||https://portal.qntest.com/eStore/registerindividual.aspx|euro|
 |https://portal.qntest.com/eStore/preregister.aspx?referrer=|3|hu041741|Kazakhstan||https://portal.qntest.com/eStore/registerindividual.aspx|us|
 |https://portal.qntest.com/eStore/preregister.aspx?referrer=|5|hu041741|Tajikistan||https://portal.qntest.com/eStore/registerindividual.aspx|euro|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|9|hu041741|Georgia||https://portal.qntest.com/eStore/registerindividual.aspx|us|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|1|hu041741|Armenia||https://portal.qntest.com/eStore/registerindividual.aspx|euro|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|0|hu041741|Syrian Arab Republic||https://portal.qntest.com/eStore/registerindividual.aspx|us|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|2|hu041741|Azerbaijan||https://portal.qntest.com/eStore/registerindividual.aspx|euro|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|3|hu041741|Cote D'Ivoire||https://portal.qntest.com/eStore/registerindividual.aspx|us|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|4|hu041741|Ethiopia||https://portal.qntest.com/eStore/registerindividual.aspx|euro|
+|https://portal.qntest.com/eStore/preregister.aspx?referrer=|8|hu041741|Others||https://portal.qntest.com/eStore/registerindividual.aspx|us|
 
 
 

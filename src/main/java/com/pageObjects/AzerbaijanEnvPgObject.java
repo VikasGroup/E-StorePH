@@ -82,6 +82,10 @@ public class AzerbaijanEnvPgObject {
 		 WebElement benificiary=driver.findElement(By.xpath(".//*[@id='txtBeneficiary']"));
 		 benificiary.sendKeys(value);
 	 }
+	 public void enterLeader(String value){
+		 WebElement benificiary=driver.findElement(By.id("tbLeaderName"));
+		 benificiary.sendKeys(value);
+	 }
 	 public void selectRelationship(String value){
 		 Select relationship=new Select(driver.findElement(By.xpath(".//*[@id='ddlBeneficiary']")));
 		 relationship.selectByIndex(Integer.parseInt(value));

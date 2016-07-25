@@ -205,7 +205,7 @@ public class EnvFormFill {
 		tajikistanenvpgobject.clickConfirmBtn();
 	}
 
-	public void MyaEnvForm(String prefix,MyanmarEnvPgObject myanmarEnvObject , Base base){
+	public void MyaEnvForm(String prefix,MyanmarEnvPgObject myanmarEnvObject , Base base) throws InterruptedException{
 		
 		myanmarEnvObject.selectTitle(base.propp.getProperty(prefix+"title"));
 		myanmarEnvObject.selectTitle(base.propp.getProperty(prefix+"title"));
@@ -219,6 +219,7 @@ public class EnvFormFill {
 		myanmarEnvObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		myanmarEnvObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		myanmarEnvObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
+		Thread.sleep(5000);
 		myanmarEnvObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno")); 
 		myanmarEnvObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		myanmarEnvObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -228,9 +229,9 @@ public class EnvFormFill {
 		myanmarEnvObject.selectRelationship(base.propp.getProperty(prefix+"relationship"));
 		myanmarEnvObject.enterMFName(base.propp.getProperty(prefix+"mfname"));
 		myanmarEnvObject.selectPClang(base.propp.getProperty(prefix+"pclang"));
-		myanmarEnvObject.selectSecques(base.propp.getProperty(prefix+"secques"));
-		myanmarEnvObject.enterAnswer(base.propp.getProperty(prefix+"ans"));
-		myanmarEnvObject.enterSecword(base.propp.getProperty(prefix+"secword"));
+		//myanmarEnvObject.selectSecques(base.propp.getProperty(prefix+"secques"));
+		//myanmarEnvObject.enterAnswer(base.propp.getProperty(prefix+"ans"));
+		//myanmarEnvObject.enterSecword(base.propp.getProperty(prefix+"secword"));
 		myanmarEnvObject.enterQApin(base.propp.getProperty(prefix+"qapin"));
 		myanmarEnvObject.enterReQapin(base.propp.getProperty(prefix+"reqapin"));
 		myanmarEnvObject.enterPwd(base.propp.getProperty(prefix+"pwd"));
@@ -239,7 +240,7 @@ public class EnvFormFill {
 		myanmarEnvObject.clickConfirmBtn(); 
 	}
 	
-	public void GeoEnvForm(String prefix,GeorgiaEnvPgObject georgiaEnvObject , Base base){
+	public void GeoEnvForm(String prefix,GeorgiaEnvPgObject georgiaEnvObject , Base base) throws InterruptedException{
 		
 		georgiaEnvObject.selectTitle(base.propp.getProperty(prefix+"title"));
 		georgiaEnvObject.selectTitle(base.propp.getProperty(prefix+"title"));
@@ -253,6 +254,7 @@ public class EnvFormFill {
 		georgiaEnvObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		georgiaEnvObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		georgiaEnvObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
+		Thread.sleep(5000);
 		georgiaEnvObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno")); 
 		georgiaEnvObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		georgiaEnvObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -273,7 +275,7 @@ public class EnvFormFill {
 		georgiaEnvObject.clickConfirmBtn(); 	
 	}
 	
-	public void EthEnvForm(String prefix,EthiopiaEnvPgObject ethiopiaEnvPgObject , Base base){
+	public void EthEnvForm(String prefix,EthiopiaEnvPgObject ethiopiaEnvPgObject , Base base) throws InterruptedException{
 		
 		ethiopiaEnvPgObject.selectTitle(base.propp.getProperty(prefix+"title"));
 		ethiopiaEnvPgObject.selectTitle(base.propp.getProperty(prefix+"title"));
@@ -287,6 +289,7 @@ public class EnvFormFill {
 		ethiopiaEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		ethiopiaEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		ethiopiaEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
+		Thread.sleep(5000);
 		ethiopiaEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno")); 
 		ethiopiaEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		ethiopiaEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -306,7 +309,7 @@ public class EnvFormFill {
 		ethiopiaEnvPgObject.selectAgreement();
 		ethiopiaEnvPgObject.clickConfirmBtn(); 
 	}
-	public void CotEnvForm(String prefix,CoteDIvoireEnvPgObject coteDIvoireEnvPgObject , Base base){
+	public void CotEnvForm(String prefix,CoteDIvoireEnvPgObject coteDIvoireEnvPgObject , Base base) throws InterruptedException{
 		
 		coteDIvoireEnvPgObject.selectTitle(base.propp.getProperty(prefix+"title"));
 		coteDIvoireEnvPgObject.enterSurname(base.propp.getProperty(prefix+"surname"));
@@ -318,7 +321,8 @@ public class EnvFormFill {
 		coteDIvoireEnvPgObject.enterMoblieNumber(base.propp.getProperty(prefix+"mobilephone"));
 		coteDIvoireEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		coteDIvoireEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
-		coteDIvoireEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));   
+		coteDIvoireEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid")); 
+		Thread.sleep(5000);
 		coteDIvoireEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		coteDIvoireEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		coteDIvoireEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -335,7 +339,7 @@ public class EnvFormFill {
 		coteDIvoireEnvPgObject.selectAgreement();
 		coteDIvoireEnvPgObject.clickConfirmBtn();		
 	}
-	public void ArmEnvForm(String prefix,ArmeniaEnvPgObject armeniaEnvPgObject, Base base){
+	public void ArmEnvForm(String prefix,ArmeniaEnvPgObject armeniaEnvPgObject, Base base) throws InterruptedException{
 		armeniaEnvPgObject.selectTitle(base.propp.getProperty(prefix+"title"));
 		armeniaEnvPgObject.enterSurname(base.propp.getProperty(prefix+"surname"));
 		armeniaEnvPgObject.enterGiveName(base.propp.getProperty(prefix+"given_name"));
@@ -346,7 +350,8 @@ public class EnvFormFill {
 		armeniaEnvPgObject.enterMoblieNumber(base.propp.getProperty(prefix+"mobilephone"));
 		armeniaEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		armeniaEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
-		armeniaEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));		      
+		armeniaEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));	
+		Thread.sleep(5000);
 		armeniaEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		armeniaEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		armeniaEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -363,7 +368,7 @@ public class EnvFormFill {
 		armeniaEnvPgObject.selectAgreement();
 		armeniaEnvPgObject.clickConfirmBtn();
 	}
-	public void AzrEnvForm(String prefix,AzerbaijanEnvPgObject azerbaijanEnvPgObject , Base base){
+	public void AzrEnvForm(String prefix,AzerbaijanEnvPgObject azerbaijanEnvPgObject , Base base) throws InterruptedException{
 		azerbaijanEnvPgObject.selectTitle(base.propp.getProperty(prefix+"title"));
 		azerbaijanEnvPgObject.enterSurname(base.propp.getProperty(prefix+"surname"));
 		azerbaijanEnvPgObject.enterGiveName(base.propp.getProperty(prefix+"given_name"));
@@ -374,13 +379,15 @@ public class EnvFormFill {
 		azerbaijanEnvPgObject.enterMoblieNumber(base.propp.getProperty(prefix+"mobilephone"));
 		azerbaijanEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		azerbaijanEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
-		azerbaijanEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));		      
+		azerbaijanEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
+		Thread.sleep(5000);
 		azerbaijanEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		azerbaijanEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		azerbaijanEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
 		azerbaijanEnvPgObject.selectdobdate(base.propp.getProperty(prefix+"dobdate"));
 		azerbaijanEnvPgObject.selectdobyear(base.propp.getProperty(prefix+"dobyear"));
 		azerbaijanEnvPgObject.enterBenificiary(base.propp.getProperty(prefix+"benificiary"));
+		azerbaijanEnvPgObject.enterLeader(base.propp.getProperty(prefix+"leader"));
 		azerbaijanEnvPgObject.selectRelationship(base.propp.getProperty(prefix+"relationship"));
 		azerbaijanEnvPgObject.enterMFName(base.propp.getProperty(prefix+"mfname"));
 		azerbaijanEnvPgObject.selectPClang(base.propp.getProperty(prefix+"pclang"));		      
@@ -391,7 +398,7 @@ public class EnvFormFill {
 		azerbaijanEnvPgObject.selectAgreement();
 		azerbaijanEnvPgObject.clickConfirmBtn();
 	}
-	public void SyrEnvForm(String prefix,SyrianArabRepublicEnvPgObject syrianArabRepublicEnvPgObject, Base base){
+	public void SyrEnvForm(String prefix,SyrianArabRepublicEnvPgObject syrianArabRepublicEnvPgObject, Base base) throws InterruptedException{
 		syrianArabRepublicEnvPgObject.selectTitle(base.propp.getProperty(prefix+"title"));
 		syrianArabRepublicEnvPgObject.enterSurname(base.propp.getProperty(prefix+"surname"));
 		syrianArabRepublicEnvPgObject.enterGiveName(base.propp.getProperty(prefix+"given_name"));
@@ -403,7 +410,8 @@ public class EnvFormFill {
 		syrianArabRepublicEnvPgObject.enterMoblieNumber(base.propp.getProperty(prefix+"mobilephone"));
 		syrianArabRepublicEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		syrianArabRepublicEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
-		syrianArabRepublicEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));		      
+		syrianArabRepublicEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
+		Thread.sleep(5000);
 		syrianArabRepublicEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		syrianArabRepublicEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
 		syrianArabRepublicEnvPgObject.selectdobdate(base.propp.getProperty(prefix+"dobdate"));
