@@ -39,7 +39,10 @@ Examples:
 
 
 
-@Reg
+
+
+
+
 Scenario Outline: registrationTunisia
 Given user open the login page 
 When user click on Register button

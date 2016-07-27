@@ -29,7 +29,7 @@ public class EnvFormFill {
 		burkinafasoEnvpgobject.enterEmail(base.propp.getProperty(prefix+"email"));
 		burkinafasoEnvpgobject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		burkinafasoEnvpgobject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		burkinafasoEnvpgobject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		burkinafasoEnvpgobject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		burkinafasoEnvpgobject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -60,7 +60,7 @@ public class EnvFormFill {
 		induPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		induPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		induPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		induPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		induPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		induPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -126,7 +126,7 @@ public class EnvFormFill {
 		iraqenvpgobject.enterEmail(base.propp.getProperty(prefix+"email"));
 		iraqenvpgobject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		iraqenvpgobject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		iraqenvpgobject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		iraqenvpgobject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		iraqenvpgobject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -156,7 +156,7 @@ public class EnvFormFill {
 		libyaenvpgobject.enterEmail(base.propp.getProperty(prefix+"email"));
 		libyaenvpgobject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		libyaenvpgobject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		libyaenvpgobject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		libyaenvpgobject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		libyaenvpgobject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -186,7 +186,7 @@ public class EnvFormFill {
 		tajikistanenvpgobject.enterEmail(base.propp.getProperty(prefix+"email"));
 		tajikistanenvpgobject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		tajikistanenvpgobject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		tajikistanenvpgobject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		tajikistanenvpgobject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		tajikistanenvpgobject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -219,7 +219,7 @@ public class EnvFormFill {
 		myanmarEnvObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		myanmarEnvObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		myanmarEnvObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		myanmarEnvObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno")); 
 		myanmarEnvObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		myanmarEnvObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -254,7 +254,7 @@ public class EnvFormFill {
 		georgiaEnvObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		georgiaEnvObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		georgiaEnvObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		georgiaEnvObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno")); 
 		georgiaEnvObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		georgiaEnvObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -289,7 +289,7 @@ public class EnvFormFill {
 		ethiopiaEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		ethiopiaEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		ethiopiaEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		ethiopiaEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno")); 
 		ethiopiaEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		ethiopiaEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -322,7 +322,7 @@ public class EnvFormFill {
 		coteDIvoireEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		coteDIvoireEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		coteDIvoireEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid")); 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		coteDIvoireEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		coteDIvoireEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		coteDIvoireEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -351,7 +351,7 @@ public class EnvFormFill {
 		armeniaEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		armeniaEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		armeniaEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));	
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		armeniaEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		armeniaEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		armeniaEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -380,7 +380,7 @@ public class EnvFormFill {
 		azerbaijanEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		azerbaijanEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		azerbaijanEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		azerbaijanEnvPgObject.selectNationality(base.propp.getProperty(prefix+"nationality"));
 		azerbaijanEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		azerbaijanEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
@@ -411,7 +411,7 @@ public class EnvFormFill {
 		syrianArabRepublicEnvPgObject.enterEmail(base.propp.getProperty(prefix+"email"));
 		syrianArabRepublicEnvPgObject.ReEnterEmail(base.propp.getProperty(prefix+"reemail"));
 		syrianArabRepublicEnvPgObject.SelectValidIdType(base.propp.getProperty(prefix+"validid"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		syrianArabRepublicEnvPgObject.enterValidIdNo(base.propp.getProperty(prefix+"valididno"));
 		syrianArabRepublicEnvPgObject.selectdobmonth(base.propp.getProperty(prefix+"dobmonth"));
 		syrianArabRepublicEnvPgObject.selectdobdate(base.propp.getProperty(prefix+"dobdate"));
@@ -448,12 +448,12 @@ public class EnvFormFill {
 		  Thread.sleep(8000);
 		  tunisiaEnvPgObject.enterIRID(base.propp.getProperty(prex+"irid"));
 		  tunisiaEnvPgObject.clickVerifyBtn();
-		  Thread.sleep(5000);
+		  Thread.sleep(10000);
 		  tunisiaEnvPgObject.selectPlacement(base.propp.getProperty(prex+"tcp"));
-		  Thread.sleep(5000);
+		  Thread.sleep(10000);
 		  tunisiaEnvPgObject.prefferPlacement(base.propp.getProperty(prex+"placementside"));
 		  tunisiaEnvPgObject.clickCountinue3();
-		  Thread.sleep(5000);
+		  Thread.sleep(10000);
 		  tunisiaEnvPgObject.clickSubmit();
 		  
 		 }

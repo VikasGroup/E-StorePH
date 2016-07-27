@@ -33,6 +33,8 @@ public class LanDetector {
 		  Optional<LdLocale>  lang = languageDetector.detect(textObject);
 		  
 		  String mm = lang.get().toString();
+		  if(mm.equalsIgnoreCase("ko"))
+			  mm="zh";
 		  return mm;
 		 }
 }

@@ -181,7 +181,7 @@ public class enrollment_steps {
 	    legal_disclaimerPgObject.checkAccept();
 	    legal_disclaimerPgObject.clickConfirm();
 		}
-		else if(country.equals("Libia")){
+		else if(country.equals("Libya")){
 			envFormFill.LibEnvform(country, libyaEnvPgObject, this.base);
 			legal_disclaimerPgObject.checkAccept();
 		    legal_disclaimerPgObject.clickConfirm();
@@ -261,8 +261,14 @@ public class enrollment_steps {
 	@Then("^Select Payment \"([^\"]*)\"$")
 	public void select_Payment(String currency) throws Throwable {
 		this.currency=currency;
-		choosePaymentPgObject.selectCurrency(currency);
-		choosePaymentPgObject.selectEcard();
+		if(country.equals("burkina")){
+			choosePaymentPgObject.selectEcard();
+		}
+		else {
+			choosePaymentPgObject.selectCurrency(currency);
+			choosePaymentPgObject.selectEcard();
+		}
+		
 		
 	}
 	@Then("^Select Payment \"([^\"]*)\" \"([^\"]*)\"$")
