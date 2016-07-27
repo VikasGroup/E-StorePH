@@ -1,6 +1,6 @@
 Feature: enrollment
 
-@Reg
+
 Scenario Outline: registration
 Given user open the login page 
 When user click on Register button
@@ -42,7 +42,7 @@ Examples:
 
 
 
-
+@Reg
 Scenario Outline: registrationTunisia
 Given user open the login page 
 When user click on Register button

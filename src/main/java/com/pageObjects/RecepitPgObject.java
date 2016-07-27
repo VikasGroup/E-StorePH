@@ -51,5 +51,9 @@ public class RecepitPgObject {
 		 WebElement clicknow=driver.findElement(By.id("lnkBuyNow1"));
 		 clicknow.click();
 	 }
+	 public void buyNowNew(){
+		 WebElement clicknow=driver.findElement(By.id("imgBtnBuyNow_Revamp2"));
+		 clicknow.click();
+	 }
 	 
 }

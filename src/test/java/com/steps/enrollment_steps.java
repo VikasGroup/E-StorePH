@@ -100,7 +100,7 @@ public class enrollment_steps {
 	}
 	@Given("^user open the login page$")
 	public void user_open_the_login_page() throws Throwable {
-		
+		System.out.println("dfvsdjvnjr");
 	   driver.get("https://portal.qntest.com/VirtualOffice/onlineestore/Online_Login_VO.aspx");
 	}
 
@@ -303,7 +303,14 @@ public class enrollment_steps {
 	    Assert.assertEquals("Logo", recepitPgObject.getLogo(),"true");
 	    Assert.assertEquals("Fee", recepitPgObject.getFee(currency),base.propp.getProperty(country+"fee"));
 	    Assert.assertEquals("Prefix", recepitPgObject.getPrefix(),base.propp.getProperty(country+"prefix"));
-	    recepitPgObject.clickBuyNow();
+	    
+	    if(country.equals("Tunisia")){
+	    	 recepitPgObject.buyNowNew();
+	    	Assert.assertEquals("BuyNowLink",driver.getCurrentUrl(),"https://portal.qntest.com/eStore/products.aspx?Category=&type=");
+	    	
+	    }else{
+	    	 recepitPgObject.clickBuyNow();
 	    Assert.assertEquals("BuyNowLink",driver.getCurrentUrl(),"https://portal.qntest.com/eStore/products.aspx?Category=&type=");
+	}
 	}
 	}
