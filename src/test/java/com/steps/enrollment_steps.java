@@ -312,5 +312,6 @@ public class enrollment_steps {
 	    	 recepitPgObject.clickBuyNow();
 	    Assert.assertEquals("BuyNowLink",driver.getCurrentUrl(),"https://portal.qntest.com/eStore/products.aspx?Category=&type=");
 	}
+	    
 	}
 	}
