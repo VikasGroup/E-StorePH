@@ -10,7 +10,7 @@ And  Choose a "<country>" in Country I live in dropdown
 And  Choose "<language>" in the language dropdown
 And  Choose "<enrolmenttype>" 
 And click next button
-And then Confirm button
+And then Confirm button 
 And validate registation page "<urlreg>"
 And  Fill up the registration form and agree to the terms in enrollment
 And  Fill up placement information
