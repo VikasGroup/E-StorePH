@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 	features = { "src/test/resources/features/" },
 	glue = {"com.base", 
 			"com.steps" },
-	tags = { "@Reg" })
+	tags = { "@Reg1" })
 public class TestRunner {
 
 }

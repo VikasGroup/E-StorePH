@@ -26,8 +26,14 @@ import com.pageObjects.SyrianArabRepublicEnvPgObject;
 import com.pageObjects.TajikistanEnvPgObject;
 import com.pageObjects.TunisiaEnvPgObject;
 import com.pageObjects.UserAgreementPgObject;
+import com.pageObjects.Company.AzerbaijanEnvComPgobj;
+import com.pageObjects.Company.CoteDIvoireEnvComPgObj;
+import com.pageObjects.Company.EthiopiaEnvComPgObj;
+import com.pageObjects.Company.GeorgiaEnvComPgObject;
+import com.pageObjects.Company.LibyaEnvComPgObj;
 import com.pageObjects.InduPgObject;
 import com.pageObjects.IraqEnvPgObject;
+import com.util.EnvComFormFill;
 import com.util.EnvFormFill;
 import com.util.PlcFormFill;
 
@@ -61,12 +67,19 @@ public class enrollment_steps {
 	public GeorgiaEnvPgObject georgiaEnvPgObject;
 	public EthiopiaEnvPgObject ethiopiaEnvPgObject;
 	public MyanmarEnvPgObject myanmarEnvPgObject;
+	public AzerbaijanEnvComPgobj azerbaijanEnvComPgobj;
 	public SyrianArabRepublicEnvPgObject syrianArabRepublicEnvPgObject;
+	public CoteDIvoireEnvComPgObj coteDIvoireEnvComPgObj;
+	public EthiopiaEnvComPgObj ethiopiaEnvComPgObj;
+	public GeorgiaEnvComPgObject georgiaEnvComPgObject;
+	public LibyaEnvComPgObj libyaEnvComPgObj;
 	public EnvFormFill envFormFill;
 	public PlcFormFill plcFormFill;
+	public EnvComFormFill envComFormFill;
 	public String country;
 	public String currency;
 	public String regurl;
+	public String type;
 	public enrollment_steps (Base base){
 		System.out.println("11111111111");
 		this.base = base;
@@ -85,16 +98,22 @@ public class enrollment_steps {
 		iraqEnvPgObject=new IraqEnvPgObject(driver);
 		recepitPgObject=new RecepitPgObject(driver);
 		hongKongEnvPgObject=new HongKongEnvPgObject(driver);
+		georgiaEnvComPgObject=new GeorgiaEnvComPgObject(driver);
 		tajikistanEnvPgObject=new TajikistanEnvPgObject(driver);
 		tunisiaEnvPgObject=new TunisiaEnvPgObject(driver);
 		georgiaEnvPgObject=new GeorgiaEnvPgObject(driver);
 		armeniaEnvPgObject=new ArmeniaEnvPgObject(driver);
 		azerbaijanEnvPgObject=new AzerbaijanEnvPgObject(driver);
+		ethiopiaEnvComPgObj=new EthiopiaEnvComPgObj(driver);
 		syrianArabRepublicEnvPgObject=new SyrianArabRepublicEnvPgObject(driver);
 		coteDIvoireEnvPgObject=new CoteDIvoireEnvPgObject(driver);
 		ethiopiaEnvPgObject=new EthiopiaEnvPgObject(driver);
 		myanmarEnvPgObject=new MyanmarEnvPgObject(driver);
+		azerbaijanEnvComPgobj=new AzerbaijanEnvComPgobj(driver);
+		coteDIvoireEnvComPgObj=new CoteDIvoireEnvComPgObj(driver);
+		libyaEnvComPgObj=new LibyaEnvComPgObj(driver);
 		plcFormFill=new PlcFormFill();
+		envComFormFill=new EnvComFormFill();
 		envFormFill=new EnvFormFill();
 		System.out.println(base.propp.getProperty("Tunisia" +"irid"));
 	}
@@ -146,6 +165,11 @@ public class enrollment_steps {
 	   preRegisterPgObject.selectCountry(country);
 	   this.country=country;
 	}
+	@When("^Select A Company$")
+	public void select_A_Company() throws Throwable {
+		preRegisterPgObject.clickCompany();
+		type="com";
+	}
 
 	@When("^Choose \"([^\"]*)\"$")
 	public void choose(String arg1) throws Throwable {
@@ -167,7 +191,7 @@ public class enrollment_steps {
 	public void validate_registation_page(String regurl) throws Throwable {
 		if(country.equals("Hong Kong, SAR")||country.equals("Tunisia")){
 			this.regurl=regurl;
-		}else{
+		}else if(type.equals("com")){
 	    Assert.assertEquals("Registating page validation",driver.getCurrentUrl(), regurl);
 	    
 		}
@@ -247,6 +271,32 @@ public class enrollment_steps {
 		}
 		
 	}
+	@When("^Fill up the company registration form and agree to the terms in enrollment$")
+	public void fill_up_the_company_registration_form_and_agree_to_the_terms_in_enrollment() throws Throwable {
+		if(country.equals("Azerbaijan")){
+			envComFormFill.AzrEnvForm(country, azerbaijanEnvComPgobj, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}else if(country.equals("Cote D'Ivoire")){
+			country="Coten";
+			envComFormFill.CoteEnvForm(country, coteDIvoireEnvComPgObj, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}else if(country.equals("Ethiopia")){
+			envComFormFill.EthiEnvForm(country, ethiopiaEnvComPgObj, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}else if(country.equalsIgnoreCase("Georgia")){
+			envComFormFill.GeorEnvForm(country, georgiaEnvComPgObject, base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}else if(country.equals("Libya")){
+			envComFormFill.LibyaEnvForm(country, libyaEnvComPgObj,base);
+			legal_disclaimerPgObject.checkAccept();
+		    legal_disclaimerPgObject.clickConfirm();
+		}
+	}
+
 
 	@When("^Fill up placement information$")
 	public void fill_up_placement_information() throws Throwable {

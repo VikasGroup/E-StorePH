@@ -26,4 +26,8 @@ public class PreRegisterPgObject {
 		 WebElement nextBtn=driver.findElement(By.xpath(".//*[@id='cmdOK']"));
 		 nextBtn.click();
 	 }
+	 public void clickCompany(){
+		 WebElement nextBtn=driver.findElement(By.id("radType_1"));
+		 nextBtn.click();
+	 }
 }
